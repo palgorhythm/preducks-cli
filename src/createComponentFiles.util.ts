@@ -4,6 +4,7 @@ import componentRender from './componentRender.util';
 
 const createComponentFiles = (
   components: any,
+  storeConfig: any,
   path: string,
   appName: string,
   exportAppBool: boolean
@@ -28,10 +29,10 @@ const createComponentFiles = (
   const promises: Array<any> = [];
   components.forEach((component: any) => {
     const newPromise = new Promise((resolve, reject) => {
-      console.log('about to write file ', `${dir}/${component.title}.tsx`);
+      // console.log('about to write file ', `${dir}/${component.title}.tsx`);
       fs.writeFileSync(
         `${dir}/${component.title}.tsx`,
-        format(componentRender(component, components), {
+        format(componentRender(component, components, storeConfig.reducers), {
           singleQuote: true,
           trailingComma: 'es5',
           bracketSpacing: true,

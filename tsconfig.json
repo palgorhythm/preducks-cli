@@ -12,8 +12,9 @@
     "baseUrl": "./src"
   },
   "include": [
-    "./src/**/*",
+    "./**/*",
     "__tests__/reducer.test.js",
-    "__tests__/puppeteer.test.js"
+    "__tests__/puppeteer.test.js",
+    "applicationConfig.ts"
   ]
 }

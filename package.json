@@ -1,16 +1,22 @@
 {
-  "name": "preducks_cli",
+  "name": "preducks-cli",
   "version": "1.0.0",
   "description": "cli version of preducks electron app",
-  "main": "index.js",
+  "main": "./build/index.js",
   "types": "./src/Interfaces.d.ts",
   "scripts": {
-    "dev": "tsc -p .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "test": "npm i -g && create-preducks-app",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/palgorhythm/preduckscli.git"
+  },
+  "bin": {
+    "create-preducks-app": "./build/index.js"
   },
   "keywords": [
     "cli",
@@ -26,6 +32,8 @@
   "homepage": "https://github.com/palgorhythm/preduckscli#readme",
   "dependencies": {
     "fs": "0.0.1-security",
+    "nodemon": "^1.19.1",
+    "ora": "^3.4.0",
     "prettier": "^1.18.2"
   },
   "devDependencies": {

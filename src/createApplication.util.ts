@@ -350,7 +350,6 @@ async function createApplicationUtil({
         }
       );
     });
-
     await createFolders(path, appName, hasRedux);
     await createIndexHtml(path, appName);
     await createReduxFiles(path, appName, storeConfig);

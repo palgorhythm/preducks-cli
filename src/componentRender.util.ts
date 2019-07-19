@@ -4,14 +4,16 @@ import {
   ChildInt,
   ChildrenInt,
   PropInt,
-  ComponentStateInterface
+  ComponentStateInterface,
+  ReducersInterface
 } from './Interfaces';
 import cloneDeep from './cloneDeep';
-import applicationConfig from './applicationConfig';
+import preducksDefaultDisplay from './preducksDefaultDisplay';
 
 const componentRender = (
   component: ComponentInt,
-  components: ComponentsInt
+  components: ComponentsInt,
+  reducers: ReducersInterface
 ) => {
   const {
     childrenArray,
@@ -110,7 +112,7 @@ const componentRender = (
     return interfaces;
   }, []);
 
-  const state = applicationConfig.storeConfig.reducers;
+  const state = reducers;
   const useSelectorCalls = selectors.length
     ? selectors
         .map(selector => {
@@ -172,7 +174,6 @@ const componentRender = (
   }
   ${actions.length ? actionsText.join('\n') : ''}
   \n\n`;
-  const preducksDefaultDisplay = `quack quack, i'm a preducks app`;
 
   const childrenToRender = `<div>
     ${cloneDeep<any>(childrenArray)
