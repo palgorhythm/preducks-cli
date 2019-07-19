@@ -1,0 +1,45 @@
+{
+  "name": "preducks_cli",
+  "version": "1.0.0",
+  "description": "cli version of preducks electron app",
+  "main": "index.js",
+  "types": "./src/Interfaces.d.ts",
+  "scripts": {
+    "dev": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palgorhythm/preduckscli.git"
+  },
+  "keywords": [
+    "cli",
+    "react",
+    "redux",
+    "typescript"
+  ],
+  "author": "jacob richards, max gonzalez, will napier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/palgorhythm/preduckscli/issues"
+  },
+  "homepage": "https://github.com/palgorhythm/preduckscli#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^12.6.8",
+    "@typescript-eslint/parser": "^1.12.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.1",
+    "typescript": "^3.5.3"
+  }
+}
