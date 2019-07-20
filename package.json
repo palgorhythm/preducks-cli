@@ -1,22 +1,22 @@
 {
-  "name": "preducks-cli",
-  "version": "1.0.0",
+  "name": "preducks",
+  "version": "1.0.2",
   "description": "cli version of preducks electron app",
   "main": "./build/index.js",
   "types": "./src/Interfaces.d.ts",
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "create": "npm run build && npm run test",
+    "refresh": "npm uninstall -g && rm -rf ./node_modules rm -rf ./build ./package-lock.json && npm install",
+    "create": "rm -rf ./preducksApp && npm run build && npm run test",
+    "start": "node 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc -p .",
-    "test": "npm i -g && create-preducks-app",
-    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+    "test": "npm i -g && rm -rf ./preducksApp && preducks"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/palgorhythm/preduckscli.git"
+    "url": "git+https://github.com/palgorhythm/preducks-cli.git"
   },
   "bin": {
-    "create-preducks-app": "./build/index.js"
+    "preducks": "./build/index.js"
   },
   "keywords": [
     "cli",
@@ -32,7 +32,6 @@
   "homepage": "https://github.com/palgorhythm/preduckscli#readme",
   "dependencies": {
     "fs": "0.0.1-security",
-    "nodemon": "^1.19.1",
     "ora": "^3.4.0",
     "prettier": "^1.18.2"
   },
