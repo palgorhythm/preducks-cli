@@ -1,6 +1,6 @@
 {
   "name": "preducks",
-  "version": "1.0.2",
+  "version": "0.0.4",
   "description": "cli version of preducks electron app",
   "main": "./build/index.js",
   "types": "./src/Interfaces.d.ts",

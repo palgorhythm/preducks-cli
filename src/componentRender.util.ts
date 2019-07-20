@@ -175,7 +175,7 @@ const componentRender = (
   ${actions.length ? actionsText.join('\n') : ''}
   \n\n`;
 
-  const childrenToRender = `<div>
+  const childrenToRender = `<div id='${title}'>
     ${cloneDeep<any>(childrenArray)
       .sort((a: ChildInt, b: ChildInt) => a.childSort - b.childSort)
       .map(

@@ -1,0 +1,31 @@
+{
+  "appName": "[YOUR_APP_NAME]",
+  "interfaces": {
+    "[INTERFACE_NAME]": {
+      "[FIELD_NAME]": "[FIELD_TYPE]",
+      "[OTHER_FIELD_NAME]": "[OTHER_FIELD_TYPE]"
+    }
+  },
+  "reducers": {
+    "[REDUCER_NAME]": {
+      "store": {
+        "[STORE_SLICE_NAME]": {
+          "type": "[TYPE]",
+          "array": "[BOOLEAN]",
+          "initialValue": "[INITIAL_VALUE]"
+        }
+      },
+      "actions": {
+        "[ACTION_NAME]": {
+          "parameter": {
+            "name": "[NAME]",
+            "type": "[TYPE]",
+            "array": "[BOOLEAN]"
+          },
+          "payload": { "type": "[TYPE]", "array": "[BOOLEAN]" },
+          "async": "[BOOLEAN]"
+        }
+      }
+    }
+  }
+}
