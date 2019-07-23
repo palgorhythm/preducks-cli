@@ -1,4 +1,4 @@
-import * as interfaces from './Interfaces';
+import * as interfaces from './InterfaceDefinitions';
 import cloneDeep from './cloneDeep';
 import {storeConfigTTTMultiReducer} from './dummyData';
 

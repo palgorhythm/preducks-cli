@@ -1,5 +1,5 @@
 import {format} from 'prettier';
-import { StoreConfigInterface } from './Interfaces';
+import { StoreConfigInterface } from './InterfaceDefinitions';
 
 const fs = require('fs');
 

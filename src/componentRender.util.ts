@@ -6,9 +6,8 @@ import {
   PropInt,
   ComponentStateInterface,
   ReducersInterface
-} from './Interfaces';
+} from './InterfaceDefinitions';
 import cloneDeep from './cloneDeep';
-import preducksDefaultDisplay from './preducksDefaultDisplay';
 
 const componentRender = (
   component: ComponentInt,
@@ -182,7 +181,7 @@ const componentRender = (
         (child: ChildInt) =>
           `<${componentNameGenerator(child)}}/>`
       )
-      .join('\n')}`+ `${title === 'App' ? preducksDefaultDisplay : ''}` +`</div>`;
+      .join('\n')}` +`</div>`;
 
   const useStateCalls = componentState.length
     ? componentState
