@@ -19,6 +19,7 @@ run with JSON config file:
 
 ```
 preducks [PATH_TO_CONFIG]
+the path should be relative to the current working directory!
 ```
 
 open up the exported app in your editor of choice.

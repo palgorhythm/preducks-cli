@@ -1,9 +1,9 @@
 {
   "name": "preducks",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "cli version of preducks prototyping app!",
   "main": "./build/index.js",
-  "types": "./src/Interfaces.d.ts",
+  "types": "./src/InterfaceDefinitions.ts",
   "scripts": {
     "refresh": "npm uninstall -g && rm -rf ./node_modules rm -rf ./build ./package-lock.json && npm install",
     "create": "rm -rf ./preducksApp && npm run build && npm run test",
