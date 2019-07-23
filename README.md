@@ -1,4 +1,4 @@
-![preduck](./preducks-logo-text.svg)
+![preduck](https://raw.githubusercontent.com/palgorhythm/preducks-web/master/preducks-logo-text.svg?sanitize=true)
 
 **preducks** is a prototyping tool for developers building **React**/**Redux**/**TypeScript** applications. This is the CLI version of the desktop/web app!
 You can export a full customized boilerplate using only the **preducks** CLI and a JSON config!
