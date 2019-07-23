@@ -8,7 +8,7 @@
     "refresh": "npm uninstall -g && rm -rf ./node_modules rm -rf ./build ./package-lock.json && npm install",
     "create": "rm -rf ./preducksApp && npm run build && npm run test",
     "start": "node 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "build": "tsc -p .",
+    "build": "rm -rf ./preducksApp && tsc -p .",
     "test": "npm i -g && rm -rf ./preducksApp && preducks"
   },
   "repository": {

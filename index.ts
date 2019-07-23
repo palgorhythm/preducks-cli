@@ -18,23 +18,19 @@ const defaultPreducksConfig = {
   },
 };
 
-if(configFilePath){
-  configFilePath = configFilePath[0] ==='.' ? configFilePath.slice(2) : configFilePath;
-}
 const configPath = configFilePath ? `${process.cwd()}/` + configFilePath : `${process.cwd()}/preducksConfig.json`;
 
 if(fs.existsSync(configPath)){
   fs.readFile(configPath, (err, data) => {
-    if (err){
-      console.log("\x1b[31m",'error reading preducksConfig: ',err);
-    }
-    else{
+    if (err) {
+      console.log('\x1b[31m','error reading preducksConfig: ',err);
+    } else {
       const preducksConfig = JSON.parse(data);
-      createPreducksApp(preducksConfig.appName, preducksConfig);
+      createPreducksApp(preducksConfig.appName ? preducksConfig.appName : 'preducksApp', preducksConfig);
     }
   })
 } else {
-  console.log("\x1b[35m",'  ❗️   no preducksConfig.json found. cooking up a default preducks app ✨', "\x1b[0m")
+  console.log('\x1b[35m','  ❗️   no preducks JSON config found. cooking up a default preducks app ✨', "\x1b[0m")
   createPreducksApp('preducksApp', defaultPreducksConfig);
 }
 
